@@ -17,30 +17,30 @@
 		<a href="index.html"><div class="header">
 				<img class="titelimg" alt="WildMap" src="header.png">
 			</div></a>
-		<div class="navbar">
+		<!-- <div class="navbar">-->
 			<div class="navpoint" style="border-left: 1px solid black">
-				<p>Filter</p>
+				<p style="font-size: 30px;">Filter</p>
 				<ul class="filter" >
 
-                    <input type="checkbox" name="tierart" value="tierart"> Tierart 
+                    <p> Tierart </p>
 					<select>
-					
+					    <option value="alle Tiere">alle Tiere</option>
 						<option value="großes Wild">großes Wild</option>
 						<option value="kleines Wild">kleines Wild</option>
 					</select>
 					<br>
-					<input type="checkbox" name="tageszeit" value="tageszeit"> Tageszeit
+					<p> Tageszeit </p>
 					<select>
-						
+						<option value="jede Tageszeit">jede Tageszeit</option>
 						<option value="Aktuell">Aktuell</option>
 						<option value="Tag">Tag</option>
 						<option value="Dämmerung">Dämmerung</option>
 						<option value="Nacht">Nacht</option>
 					</select>
 					<br>
-					<input type="checkbox" name="Jahreszeit" value="jahreszeit"> Jahreszeit
+					<p> Jahreszeit </p>
 					<select>
-						
+						<option value="jede Jahreszeit">jede Jahreszeit</option>
 						<option value="Aktuell">Aktuell</option>
 						<option value="Frühling">Frühling</option>
 						<option value="Sommer">Sommer</option>
@@ -48,13 +48,14 @@
 						<option value="Winter">Winter</option>
 					</select>
 					<br>
+					<p> gesperrte Straßen </p>
 					<form action="input_radio.htm" >
 					 <input type="checkbox" name="gesperrteStrecken" value="gs"> gesperrte Strecken
 					</form>
 					
 				</ul>
 			</div>
-			<div class="navpoint">
+			<!-- <div class="navpoint">
 				<p>Routenplaner</p>
 				<ul>
 					
@@ -71,13 +72,13 @@
 					<p>Impressum/Kontakt</p>
 				</a>
 			</div>
-		</div>
+		</div> -->
 
 		<div class="map"></div>
 
 		<div class="legende"></div>
 
-	</div>
+	
 
 
 </body>
