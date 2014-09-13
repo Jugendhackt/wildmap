@@ -1,7 +1,7 @@
 "use strict"
 L.mapbox.accessToken = 'pk.eyJ1IjoiZ2VvZXh0cmEiLCJhIjoiMmVQS3FFUSJ9.Dy3qUnL_yND8i7_-77t1Gg';
 var map = L.mapbox.map('map', 'geoextra.jg8l0ikh')
-    .setView([40, -74.50], 9);
+    .setView([51.329, 10.454], 6);
 
 var update = function(){
 	$.getJSON("/api/accidents", function(accidents){
