@@ -36,11 +36,6 @@ div.navpoint{
 	
 }
 
-@font-face { 
-font-family: "AT"; 
-src: url("AmericanTypewriter.ttc");
-}
-
 div.header{
 	margin: 0px auto;
 	height: 100px;
