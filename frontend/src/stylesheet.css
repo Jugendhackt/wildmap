@@ -38,6 +38,8 @@ div.navpoint{
 	
 }
 
+@font-face { font-family:at; src:url(AmericanTypewriter.ttc), url(garamond.pfr); }
+
 div.header{
 	margin: 0px auto 50px;
 	height: 100px;
