@@ -17,7 +17,7 @@ var random = function(array) {
 
 var animal_types = ["small", "big"];
 var day_types = ["day", "dawn", "night"];
-var seosons = ["spring", "summer", "autumn", "winder"];
+var seasons = ["spring", "summer", "autumn", "winder"];
 
 for (var i = count - 1; i >= 0; i--) {
 	var location = {};
@@ -27,7 +27,7 @@ for (var i = count - 1; i >= 0; i--) {
 	
 	var animal_type = random(animal_types);
 	var day_type = random(day_types);
-	var seoson = random(seosons);
+	var season = random(seasons);
 
 
 	client.index({
@@ -38,8 +38,11 @@ for (var i = count - 1; i >= 0; i--) {
 			"pin" : {
 				"animal_type" : animal_type,
 				"day_type" : day_type,
-				"seoson" : seoson,
-				"location" : [location.lat, location.lon]
+				"season" : season,
+				"location" : {
+					"lat" : location.lat,
+					"lon" : location.lon
+				}
 			}
 		}
 	}).then(function (resp) {
