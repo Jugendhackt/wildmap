@@ -1,3 +1,4 @@
+"use strict"
 var faker = require('faker');
 
 var elasticsearch = require('elasticsearch');
@@ -8,19 +9,41 @@ var client = new elasticsearch.Client({
 
 var count = require('minimist')(process.argv.slice(2))._[0];
 
+var random = function(array) {
+	var count = array.length;
+	var random = Math.random() * count;
+	return array[parseInt(random)];
+};
+
+var animal_types = ["small", "big"];
+var day_types = ["day", "dawn", "night"];
+var seosons = ["spring", "summer"];
+
 for (var i = count - 1; i >= 0; i--) {
-	var name = faker.Name.findName();
 	var location = {};
-	location.lat = faker.Address.latitude();
-	location.lon = faker.Address.longitude();
+	location.lat = parseFloat(faker.Address.latitude());
+	location.lon = parseFloat(faker.Address.longitude());
+
+	
+	var animal_type = random(animal_types);
+	var day_type = random(day_types);
+	var seoson = random(seosons);
+
 
 	client.index({
-		index: 'wildmap',
-		type: 'accidents',
+		index: "wildmap",
+		type: "accidents",
 		id: i,
 		body: {
-			name: name,
-			location: location
+			"pin" : {
+				"animal_type" : animal_type,
+				"day_type" : day_type,
+				"seoson" : seoson,
+				"location" : {
+					"lat" : location.lat,
+					"lon" : location.lon
+				}
+			}
 		}
 	}).then(function (resp) {
 		console.log('All done!');

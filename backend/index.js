@@ -10,16 +10,27 @@ var client = new elasticsearch.Client({
 var router = express.Router(); 
 
 router.get('/accidents', function(req, res) {
-	client.search({
+
+	var query = {
 		index: 'wildmap',
 		type: 'accidents',
 		size: 10000,
 		body: {
-			query: {
-				match_all: {}
-			}
+			"filtered" : {
+				"query": {
+					"match_all": {}
+				},
+				"filter" : {
+		            "bool" : {
+		                "must" : {
+		                    "term" : { "day_type" : "night" }
+		                }
+		            }
+		        }
+	        }
 		}
-	}).then(function (resp) {
+	}
+	client.search(query).then(function (resp) {
 		console.trace(resp.hits.hits);
 		res.send(resp.hits.hits);
 	}, function (err) {
@@ -29,11 +40,6 @@ router.get('/accidents', function(req, res) {
 });
 
 app.use('/api', router);
-
-
-app.get('/api/accidents', function(req, res){
-	
-});
 
 var port = process.env.PORT || 8080;
 app.listen(port);
