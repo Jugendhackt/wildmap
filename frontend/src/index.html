@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html>
-	<head>
+<head>
+<meta charset="ISO-8859-1">
+<title>WildMap</title>
+<link href="stylesheet.css" rel="stylesheet" type="text/css">
 
-		<title>Wildmap</title>
-		<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.0/mapbox.js'></script>
-		<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.0/mapbox.css' rel='stylesheet' />
-		<style>
-			body { margin:0; padding:0; }
-			#map { position:absolute; top:0; bottom:0; width:100%; }
-		</style>
-		<script src="js/bootstrap.min.js"></script>
-	</head>
-	<body>
-		<div id='map'></div>
-		<script>
-		L.mapbox.accessToken = 'pk.eyJ1IjoiZ2VvZXh0cmEiLCJhIjoiMmVQS3FFUSJ9.Dy3qUnL_yND8i7_-77t1Gg';
-		var map = L.mapbox.map('map', 'examples.map-i86nkdio')
-			.setView([40, -74.50], 9);
-		</script>
-	</body>
+</head>
+<body>
+	<div class="main">
+
+		<a href="WildMap.html"><div class="header">
+				<img class="titelimg" alt="WildMap" src="header.j">
+			</div></a>
+		<div class="navbar">
+			<div class="navpoint" style="border-left: 1px solid black">
+				<p>Filter</p>
+			</div>
+			<div class="navpoint">
+				<p>Routenplaner</p>
+			</div>
+			<div class="navpoint">
+				<p>Melden</p>
+			</div>
+			<div class="navpoint">
+				<a href="impressum.html">
+					<p>Impressum/Kontakt</p>
+				</a>
+			</div>
+		</div>
+
+		<div class="map"></div>
+
+		<div class="legende"></div>
+
+	</div>
+
+
+</body>
 </html>
