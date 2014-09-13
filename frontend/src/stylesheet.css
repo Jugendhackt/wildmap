@@ -3,6 +3,7 @@
 *{
 	margin:0px ;
 	padding: 0px;
+	font-family: at;
 }
 
 body{
@@ -10,6 +11,7 @@ body{
 	background-color: #c1ea87;
 }
 
+@font-face { font-family:at; src:url(AmericanTypewriter.ttc)  url(AmericanTypewriter.ttc); }
 ul.filter{
 	text-align: left;
 }
@@ -37,8 +39,6 @@ div.navpoint{
 	
 	
 }
-
-@font-face { font-family:at; src:url(AmericanTypewriter.ttc), url(garamond.pfr); }
 
 div.header{
 	margin: 0px auto 50px;
