@@ -1,0 +1,24 @@
+{
+  "name": "Wildmap",
+  "version": "1.0.0",
+  "description": "Frontend for Wildmap",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jugendhackt/wildmap.git"
+  },
+  "author": "Team Wildmap",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jugendhackt/wildmap/issues"
+  },
+  "homepage": "https://github.com/Jugendhackt/wildmap",
+  "dependencies": {
+    "gulp": "^3.8.8",
+    "gulp-connect": "^2.0.6",
+    "proxy-middleware": "^0.5.1"
+  }
+}

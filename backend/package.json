@@ -1,0 +1,23 @@
+{
+  "name": "Wildmap",
+  "version": "1.0.0",
+  "description": "Search proxy for Wildmap written in Node.JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jugendhackt/wildmap.git"
+  },
+  "author": "Team Wildmap",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jugendhackt/wildmap/issues"
+  },
+  "homepage": "https://github.com/Jugendhackt/wildmap",
+  "dependencies": {
+    "elasticsearch": "^2.4.2",
+    "express": "^4.9.0"
+  }
+}
