@@ -7,7 +7,9 @@ var client = new elasticsearch.Client({
 	log: 'trace'
 });
 
-app.get('/api/accidents', function(req, res){
+var router = express.Router(); 
+
+router.get('/accidents', function(req, res) {
 	client.search({
 		index: 'wildmap',
 		type: 'accidents',
@@ -22,7 +24,17 @@ app.get('/api/accidents', function(req, res){
 		res.send(resp.hits.hits);
 	}, function (err) {
 		console.trace(err.message);
+		res.status(500).end();
 	});
 });
 
-app.listen(8080);
+app.use('/api', router);
+
+
+app.get('/api/accidents', function(req, res){
+	
+});
+
+var port = process.env.PORT || 8080;
+app.listen(port);
+console.log("Backend is running on port " + port);
