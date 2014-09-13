@@ -20,25 +20,38 @@
 		<div class="navbar">
 			<div class="navpoint" style="border-left: 1px solid black">
 				<p>Filter</p>
-				<ul>
+				<ul class="filter" >
 
+                    <input type="checkbox" name="tierart" value="tierart"> Tierart 
 					<select>
+					
 						<option value="großes Wild">großes Wild</option>
 						<option value="kleines Wild">kleines Wild</option>
 					</select>
+					<br>
+					<input type="checkbox" name="tageszeit" value="tageszeit"> Tageszeit
 					<select>
+						
 						<option value="Aktuell">Aktuell</option>
 						<option value="Tag">Tag</option>
 						<option value="Dämmerung">Dämmerung</option>
 						<option value="Nacht">Nacht</option>
 					</select>
+					<br>
+					<input type="checkbox" name="Jahreszeit" value="jahreszeit"> Jahreszeit
 					<select>
+						
 						<option value="Aktuell">Aktuell</option>
 						<option value="Frühling">Frühling</option>
 						<option value="Sommer">Sommer</option>
 						<option value="Herbst">Herbst</option>
 						<option value="Winter">Winter</option>
 					</select>
+					<br>
+					<form action="input_radio.htm" >
+					 <input type="checkbox" name="gesperrteStrecken" value="gs"> gesperrte Strecken
+					</form>
+					
 				</ul>
 			</div>
 			<div class="navpoint">

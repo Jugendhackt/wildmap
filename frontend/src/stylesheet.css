@@ -5,6 +5,15 @@
 	padding: 0px;
 }
 
+body{
+	
+	background-color: #c1ea87;
+}
+
+ul.filter{
+	text-align: left;
+}
+
 div.main {
 	margin: 0px auto;
 	width: 900px;
