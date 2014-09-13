@@ -17,7 +17,7 @@ var random = function(array) {
 
 var animal_types = ["small", "big"];
 var day_types = ["day", "dawn", "night"];
-var seosons = ["spring", "summer"];
+var seosons = ["spring", "summer", "autumn", "winder"];
 
 for (var i = count - 1; i >= 0; i--) {
 	var location = {};
@@ -39,10 +39,7 @@ for (var i = count - 1; i >= 0; i--) {
 				"animal_type" : animal_type,
 				"day_type" : day_type,
 				"seoson" : seoson,
-				"location" : {
-					"lat" : location.lat,
-					"lon" : location.lon
-				}
+				"location" : [location.lat, location.lon]
 			}
 		}
 	}).then(function (resp) {

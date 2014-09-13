@@ -17,23 +17,18 @@ router.get('/accidents', function(req, res) {
 		type: 'accidents',
 		size: 10000,
 		body: {
-			"filtered" : {
-				"query": {
-					"match_all": {}
-				},
-				"filter" : {
-		            "bool" : {
-		                "must" : {
-		                    "term" : { "day_type" : "night" }
-		                }
-		            }
-		        }
-	        }
+			"query": {
+				"match_all": {}
+			}
 		}
 	}
+
 	client.search(query).then(function (resp) {
 		console.trace(resp.hits.hits);
-		res.send(resp.hits.hits);
+		var response = resp.hits.hits.map(function(e){
+			return e._source.pin;
+		})
+		res.send(response);
 	}, function (err) {
 		console.trace(err.message);
 		res.status(500).end();
