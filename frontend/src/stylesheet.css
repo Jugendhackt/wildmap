@@ -1,7 +1,9 @@
+@CHARSET "ISO-8859-1";
+
 *{
 	margin:0px ;
 	padding: 0px;
-	font-family: an;
+	font-family: at;
 }
 
 body{
@@ -9,9 +11,7 @@ body{
 	background-color: #c1ea87;
 }
 
-@font-face { font-family:at; src:url(../../fonts/AmericanTypewriter.ttc)  url(../../fonts/AmericanTypewriter.ttc); }
-@font-face { font-family:an; src:url(../../Atype 1 Normal)  url(../../Atype 1 Normal); }
-
+@font-face { font-family:at; src:url(AmericanTypewriter.ttc)  url(AmericanTypewriter.ttc); }
 ul.filter{
 	text-align: left;
 }
