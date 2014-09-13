@@ -17,6 +17,7 @@ ul.filter{
 div.main {
 	margin: 0px auto;
 	width: 900px;
+	z-index: 100;
 }
 
 div.navbar{
