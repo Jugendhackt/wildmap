@@ -18,6 +18,8 @@
   "homepage": "https://github.com/Jugendhackt/wildmap",
   "dependencies": {
     "elasticsearch": "^2.4.2",
-    "express": "^4.9.0"
+    "express": "^4.9.0",
+    "faker": "^1.1.0",
+    "minimist": "^1.1.0"
   }
 }

@@ -11,6 +11,7 @@ app.get('/api/accidents', function(req, res){
 	client.search({
 		index: 'wildmap',
 		type: 'accidents',
+		size: 10000,
 		body: {
 			query: {
 				match_all: {}
