@@ -8,7 +8,6 @@ body{
 	background-color: #c1ea87;
 }
 
-@font-face { font-family:at; src:url(AmericanTypewriter.ttc)  url(AmericanTypewriter.ttc); }
 ul.filter{
 	text-align: left;
 }
@@ -23,6 +22,8 @@ div.header{
 	margin: 0px auto 50px;
 	height: 100px;
 	pointer-events: auto;
+	margin-left: 20%;
+	position: fixed;
 }
 
 div.navpoint{
@@ -32,8 +33,15 @@ div.navpoint{
 	padding: 10px 10px 10px 10px;
 	margin: auto;
 	background-color: #009900;
-	box-shadow: 10px 10px 10px black;
 	pointer-events: auto;
+	margin-left: 53px;
+	margin-top: 11px;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+@font-face {
+font-family: Oswald;
+src: url("");
 }
 
 .navpoint p{

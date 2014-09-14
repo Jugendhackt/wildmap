@@ -7,6 +7,7 @@
 
 	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 
 	<link href="index.css" rel="stylesheet" type="text/css">
 	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
@@ -16,35 +17,35 @@
 		<div class="main" style="pointer-events: none">
 			<a href="/">
 				<div class="header">
-					<img class="titelimg" alt="WildMap" src="header.png">
+					<img class="titelimg" alt="WildMap" src="header.png" width="900" height="100">
 				</div>
 			</a>
-			<div class="navpoint" style="border-left: 1px solid black" >
+			<div class="navpoint" style="border-left: 1px solid black">
 				<p style="font-size: 30px;" >Filter</p>
 				<ul class="filter" >
 
-                    <p> Tierart </p>
-					<select>
-					    <option value="alle Tiere">alle Tiere</option>
-						<option value="großes Wild">großes Wild</option>
-						<option value="kleines Wild">kleines Wild</option>
+                    <p style="font-face: Oswald"> Tierart </p>
+					<select id="animal_type">
+						<option value="all">alle Tiere</option>
+						<option value="big">großes Wild</option>
+						<option value="small">kleines Wild</option>
 					</select>
 					<br>
 					<p> Tageszeit </p>
-					<select>
-						<option value="jede Tageszeit">jede Tageszeit</option>
-						<option value="Tag">Tag</option>
-						<option value="Dämmerung">Dämmerung</option>
-						<option value="Nacht">Nacht</option>
+					<select id="day_type">
+						<option value="all">jede Tageszeit</option>
+						<option value="day">Tag</option>
+						<option value="dawn">Dämmerung</option>
+						<option value="night">Nacht</option>
 					</select>
 					<br>
 					<p> Jahreszeit </p>
-					<select>
-						<option value="jede Jahreszeit">jede Jahreszeit</option>
-						<option value="Frühling">Frühling</option>
-						<option value="Sommer">Sommer</option>
-						<option value="Herbst">Herbst</option>
-						<option value="Winter">Winter</option>
+					<select id="season">
+						<option value="all">jede Jahreszeit</option>
+						<option value="spring">Frühling</option>
+						<option value="summer">Sommer</option>
+						<option value="autumn">Herbst</option>
+						<option value="winder">Winter</option>
 					</select>
 					<br>
 					<p> gesperrte Straßen </p>
